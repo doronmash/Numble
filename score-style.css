@@ -1,0 +1,96 @@
+
+body{
+    background-color:#56629D;
+
+}
+
+label{
+    font-size: 28px;
+    margin: 3px;
+    animation: glowing 3s infinite;
+
+}
+
+@keyframes glowing {
+    0% { box-shadow: 0 0 -10px #c4a300; }
+    40% { box-shadow: 0 0 20px #c4a300; }
+    60% { box-shadow: 0 0 20px #c4a300; }
+    100% { box-shadow: 0 0 -10px #c4a300; }
+}
+
+
+input[type='text']{
+    background-color: #56629D;
+    height: 25px;
+    width: 50px;
+    font-size: 25px;
+    text-align: center;
+    padding:10px;
+    border-radius:10px;
+    margin: 3px;
+    
+    
+}
+
+h1 {
+    color:firebrick;
+    font-family: arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    padding-bottom: 20px;
+    animation: mymove 7s infinite;
+    
+
+}
+@keyframes mymove {
+    0%   {color: red;}
+    25%  {color: purple;}
+    50%  {color: orange;}
+    100% {color: yellow;}
+}
+
+
+.scoreScreen{
+    background-color: #7D86B1 ;
+    margin: auto;
+    width: 50%;
+    padding: 100px;
+    text-align: center; 
+    display: table;
+    animation: glowing 3s infinite;
+
+}
+
+@keyframes whitAnimathion {
+    0% { box-shadow: 0 0 -10px #FFFFFF; }
+    40% { box-shadow: 0 0 20px #F0FFFF; }
+    60% { box-shadow: 0 0 20px #F0F8FF; }
+    100% { box-shadow: 0 0 -10px #FFFAFA; }
+}
+
+.backButton{
+    border-radius: 12px;
+    padding: 16px 32px;
+    background-color: #00b3b3;
+    animation: whitAnimathion 3s infinite;
+    font-size: 15px;
+}
+
+.backButton:hover{
+    border: 3px solid  #00ffff; 
+
+    border-color: #00ffff;
+}
+.backButton:active{
+    background-color: #00ffff;
+}
+
+
+
+.guessStatistics{
+    margin: 50px;
+    
+    
+}

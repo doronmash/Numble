@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="numble.js"></script>
+    <title>Numble</title>
+</head>
+<body>
+
+    <div class="container ">
+
+        <div id="confetti" class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+        <div class="confetti "></div>
+
+        <div class="mainScrean">
+
+            <div class="options">
+                <h1>NUMBLE</h1>
+                <input type="button" class="btn" value="Scores" onclick="window.location.href='scores.html';">    
+                <input type="button" class="btn" id="start" value="Start" onclick="start()">
+            </div>
+        
+            <br><br>
+
+            <div class="win">
+                <h1 id="winH1">WIN!!!</h1>
+            </div>
+
+            <br><br>
+        
+            <div class="matrix">
+                <input type="text" readonly="readonly" class="mathText1" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText1" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText1" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText1" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText1" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText1" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText1" id="mathText1" value="" size="5">
+                <label id="label1" for="mathText1">=</label>
+        
+                <br><br>
+                
+                <input type="text" readonly="readonly" class="mathText2" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText2" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText2" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText2" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText2" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText2" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText2" id="mathText2" value="" size="5">
+                <label id="label2" for="mathText2">=</label>
+    
+                <br><br>
+        
+                <input type="text" readonly="readonly" class="mathText3" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText3" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText3" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText3" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText3" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText3" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText3" id="mathText3" value="" size="5">
+                <label id="label3" for="mathText3">=</label>
+    
+                <br><br>
+
+                <input type="text" readonly="readonly" class="mathText4" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText4" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText4" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText4" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText4" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText4" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText4" id="mathText4" size="5">
+                <label id="label4" for="mathText4">=</label>
+    
+                <br><br>
+                
+                <input type="text" readonly="readonly" class="mathText5" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText5" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText5" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText5" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText5" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText5" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText5" id="mathText5" value="" size="5">
+                <label id="label5" for="mathText5">=</label>
+    
+                <br><br>
+    
+                <input type="text" readonly="readonly" class="mathText6" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText6" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText6" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText6" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText6" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText6" value="" size="5">
+                <input type="text" readonly="readonly" class="mathText6" id="mathText6" value="" size="5">
+                <label id="label6" for="mathText6">=</label>
+    
+                <br><br>
+        
+            </div>
+            <br><br><br><br><br><br>
+
+            <div class="calc">
+        
+                <input type="button" id="1" class="calcButton number" value="1" onclick="insertValue(value)">
+                <input type="button" id="2" class="calcButton number" value="2" onclick="insertValue(value)">
+                <input type="button" id="3" class="calcButton number" value="3" onclick="insertValue(value)">
+                <input type="button" id="4" class="calcButton number" value="4" onclick="insertValue(value)">
+                <input type="button" id="5" class="calcButton number" value="5" onclick="insertValue(value)">
+                <br><br>
+                
+                <input type="button" id="6" class="calcButton number" value="6" onclick="insertValue(value)">
+                <input type="button" id="7" class="calcButton number" value="7" onclick="insertValue(value)">
+                <input type="button" id="8" class="calcButton number" value="8" onclick="insertValue(value)">
+                <input type="button" id="9" class="calcButton number" value="9" onclick="insertValue(value)">
+                <input type="button" id="0" class="calcButton number" value="0" onclick="insertValue(value)">
+                <br><br>
+        
+                <input type="button" id="+" class="calcButton sign" value="+" onclick="insertValue(value)">
+                <input type="button" id="-" class="calcButton sign" value="-" onclick="insertValue(value)">
+                <input type="button" id="/" class="calcButton sign" value="/" onclick="insertValue(value)">
+                <input type="button" id="*" class="calcButton sign" value="*" onclick="insertValue(value)">
+                <input type="button" class="calcButton" value="<=" onclick="deleteValue()">
+                <br><br>
+        
+                <input type="button" class="btn" id="enter" value="Enter" onclick="enter()">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

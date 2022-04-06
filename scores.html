@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="score-style.css">
+    <script src="score.js"></script>
+    <title>Scores</title>
+</head>
+
+<body>
+    <div class="scoreScreen">
+
+        <div class="label">
+            <h1>DAILY STATISTICS</h1>
+        </div>
+    
+        <div class="statistics">
+            <label for="played">Played</label>
+            <input type="text" readonly="readonly" id="played" value="0">
+    
+            <label for="won">Won</label>
+            <input type="text" readonly="readonly" id="won" >
+    
+            <label for="won%">Won %</label>
+            <input type="text" readonly="readonly" id="won%" value="NaN">
+        </div>
+        
+        <div class="guessStatistics"> 
+
+            <div>
+                <label for="guess">Guess 1</label>
+                <input type="text" readonly="readonly" class="1" id="1">
+            </div>
+
+            <div>
+                <label for="guess">Guess 2</label>
+                <input type="text" readonly="readonly" class="2" id="2">
+            </div>
+            
+            <div>
+                <label for="guess">Guess 3</label>
+                <input type="text" readonly="readonly" class="3" id="3">
+            </div>
+            
+            <div>
+                <label for="guess">Guess 4</label>
+                <input type="text" readonly="readonly" class="4" id="4">
+            </div>
+            
+            <div>
+                <label for="guess"> Guess 5</label>
+                <input type="text" readonly="readonly" class="5" id="5">
+            </div>
+           
+            <div>
+                <label for="played"> Guess 6</label>
+                <input type="text" readonly="readonly" class="6" id="6">
+            </div>
+            
+        </div>
+
+        <div class="back-button">
+            <input type="button" class="backButton" value="Back" onclick="window.location.href='index.html';">
+        </div>
+
+    </div>
+</body >
+</html>
