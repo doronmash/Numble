@@ -1,4 +1,4 @@
-                                       Numble
+                                              Numble
 The goal of the game is to create the wanted equation that generates the displayed number. 
 
 Rules:
