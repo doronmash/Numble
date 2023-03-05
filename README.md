@@ -1,6 +1,8 @@
                                                    Numble
 The goal of the game is to create the wanted equation that generates the displayed number. 
 
+This version is being adapted for QT Webview
+
 Rules:
 User inserts numbers and operators that should generate the displayed number, and afterwards clicks submit.
 
