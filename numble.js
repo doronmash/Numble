@@ -59,18 +59,21 @@ function deleteValue() {
 }
 
 function start() {
-    var sign = ['+', '-', '*', '/'];
+    reset();
+    var sign = ['+', '-', '*', '/', '*'];
     equation = new Array(7);
+
+    var h1 = document.getElementById("winH1");
+    h1.style.display = "none";
 
     for (var i = 0; i < 7; i++) {
         if (i % 2 === 0) {
-            equation[i] = Math.floor(Math.random() * 10);
+            equation[i] = Math.floor(Math.random() * 9)+1;
         }
         else {
-            equation[i] = sign[Math.floor(Math.random() * 4)]
+            equation[i] = sign[Math.floor(Math.random() * 5)]
         }
     }
-
     disableElements(cellIndex);
     result = calculateResultNumber(equation);
     if (!Number.isInteger(result)) {
@@ -78,6 +81,26 @@ function start() {
     }
     document.getElementById("label" + index).innerHTML = ("= " + result);
     document.getElementById("start").disabled = true;
+}
+function reset() {
+
+    index = 1;
+    cellIndex = 0;
+    //var arr = document.getElementsByClassName("mathText" + (index));
+    for (n=1;n<=6;n++) {
+        const boxes =  document.getElementsByClassName('mathText' +(n)) ;
+        for (const box of boxes) {
+          box.style.backgroundColor = '#56629D';;
+          box.value='';
+          box.disabled = false;
+        }
+        document.getElementById("label" + n).innerHTML = ("=");
+    }
+    const bts =  document.getElementsByClassName('calcButton') ;
+    for (const bt of bts) {
+      bt.style.backgroundColor = '#00b3b3';
+      bt.disabled = false;
+    }
 }
 
 function calculateResultNumber(equation) {
@@ -95,15 +118,17 @@ function enter() {
             console.log("winner");
             var h1 = document.getElementById("winH1");
 
-            var elementDiv = document.getElementsByClassName("confetti");
+            /*var elementDiv = document.getElementsByClassName("confetti");
             for (var i = 0; i < elementDiv.length; i++) {
                 elementDiv[i].style.display = "inline";
-            }
+            }*/
 
-            h1.style.visibility = "visible";
+            var h1 = document.getElementById("winH1");
+            h1.style.display = "inline";
 
             localStorage.setItem("win", 1);
             initLockStorege(index);
+            document.getElementById("start").disabled = false;
         }
         else {
             index++;
@@ -167,9 +192,9 @@ function initLockStorege(index) {
 
 function changeColorHelper(inputEquation, tempEquation, element, index, animation, color, char) {
     inputEquation[index].style.backgroundColor = color;
-    inputEquation[index].style.animation = animation;
+    /* inputEquation[index].style.animation = animation; */
     element.style.backgroundColor = color;
-    element.style.animation = animation;
+    /* element.style.animation = animation; */
     if (char != null) {
         tempEquation[index] = char;
     }
@@ -262,23 +287,23 @@ function checkResult() {
 
                 if (!(tempEquation.includes(inputEquationChangeToNumber))) {
                     inputEquation[i].style.backgroundColor = "gray";
-                    inputEquation[i].style.animation = "grayAnimathion 3s infinite";
+                    /* inputEquation[i].style.animation = "grayAnimathion 3s infinite";*/
                     console.log(document.getElementById(inputEquation[i].value).style.backgroundColor);
 
                     if (document.getElementById(inputEquation[i].value).style.backgroundColor != "green" && document.getElementById(inputEquation[i].value).style.backgroundColor != "yellow") {
                         element.style.backgroundColor = "gray";
-                        element.style.animation = "grayAnimathion 3s infinite";
+                        /*element.style.animation = "grayAnimathion 3s infinite"; */
                     }
                 }
             }
             else {
                 if (!(tempEquation.includes(inputEquation[i].value))) {
                     inputEquation[i].style.backgroundColor = "gray";
-                    inputEquation[i].style.animation = "grayAnimathion 3s infinite";
+                    /*inputEquation[i].style.animation = "grayAnimathion 3s infinite";*/
 
                     if (document.getElementById(inputEquation[i].value).style.backgroundColor != "green" && document.getElementById(inputEquation[i].value).style.backgroundColor != "yellow") {
                         element.style.backgroundColor = "gray";
-                        element.style.animation = "grayAnimathion 3s infinite";
+                        /* element.style.animation = "grayAnimathion 3s infinite"; */
                     }
                 }
             }
