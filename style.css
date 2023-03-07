@@ -1,6 +1,6 @@
 
 body{
-    background-color:#56629D;
+    background-color:grey;
 }
 
 
@@ -57,56 +57,56 @@ h1 {
 
 
 #winH1{
-    visibility: hidden;
-    font-size: 5rem;
+    display: none;
+    font-size: 2rem;
     text-align: center;
     color: #fcedd8;
-    font-family: "Niconne", cursive;
+    /*font-family: "Niconne", cursive; */
     font-weight: 700;
-    text-shadow: 5px 5px 0 #eb452b, 10px 10px 0 #efa032, 15px 15px 0 #46b59b,
-    20px 20px 0 #017e7f, 25px 25px 0 #052939, 30px 30px 0 #c11a2b;
+    /*text-shadow: 5px 5px 0 #eb452b, 10px 10px 0 #efa032, 15px 15px 0 #46b59b,
+    20px 20px 0 #017e7f, 25px 25px 0 #052939, 30px 30px 0 #c11a2b;*/
 }
 
 label{
-    font-size: 30px;
+    font-size: 3vw;
     margin: 3px;
 }
 
 
 input[type='text']{
     background-color: #56629D;
-    height: 25px;
-    width: 25px;
-    font-size: 25px;
+    height: 7vw;
+    width: 7vw;
+    font-size: 4vw;
     text-align: center;
-    padding:10px;
-    border-radius:10px;
-    margin: 3px;
+    padding:1vw;
+    border-radius:5px;
+    margin: 1px;
 }
 
 .mainScrean{
-    background-color: #7D86B1 ;
+    /* background-color: #7D86B1 ; */
 
     margin: auto;
-    width: 50%;
-    padding: 10px;
+    width: 100%;
+    padding: 1vw;
     text-align: center;   
 }
 
 .matrix{
-    background-color: #7D86B1 ;
+    /* background-color: #7D86B1 ; */
 }
 
 .calc{
-    background-color: #7D86B1 ;
+    /* background-color: #7D86B1 ; */
 }
 
 
 .btn{
     border-radius: 12px;
-    padding: 16px 32px;
+    padding: 2vw 4vw;
     background-color: #00b3b3;
-    animation: whitAnimathion 3s infinite;
+    /* animation: whitAnimathion 3s infinite; */
     font-size: 15px;
 
     
@@ -114,7 +114,7 @@ input[type='text']{
 
 
 .btn:hover{
-    border: 3px solid  #00ffff; 
+    border: 2px solid  #00ffff; 
 
     border-color: #00ffff;
 }
@@ -123,17 +123,17 @@ input[type='text']{
 }
 
 .calcButton{
-    border-radius: 12px;
-    padding: 16px 32px;
+    border-radius: 2vw;
+    padding: 2vw 4vw;
     background-color: #00b3b3;
-    font-size: 15px;
+    font-size: 5vw;
 
 
     /* animation: whitAnimathion 3s infinite; */
 }
 
 .calcButton:hover{
-    border: 3px solid  #00ffff; 
+    border: 2px solid  #00ffff; 
 
     border-color: #00ffff;
 }
@@ -143,7 +143,7 @@ input[type='text']{
 
 
 .container {
-    /* width: 100%; */
+    width: 100%; 
     height: 100%;
     
 }
